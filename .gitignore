@@ -30,3 +30,5 @@ Thumbs.db
 
 # Claude Code
 .claude/
+backend/data/*.db-shm
+backend/data/*.db-wal
