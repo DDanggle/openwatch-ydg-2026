@@ -3,7 +3,7 @@ import { formatWon } from '../../lib/formatters'
 import type { GapItem } from './GapCard'
 import type { AgentMessage, AgentRole } from '../../api/types'
 
-const API = 'http://localhost:8010/api'
+const API = ''
 
 interface Props {
   item: GapItem

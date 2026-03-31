@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { formatWon } from '../../lib/formatters'
 
-const API = 'http://localhost:8010/api'
+const DATA_BASE = '/data'
 
 interface Dot {
   id: number; name: string; apt: string; sido: string; sigungu: string; dong: string
@@ -29,7 +29,7 @@ interface DistData {
 function useDistribution() {
   return useQuery<DistData>({
     queryKey: ['gap-dist'],
-    queryFn: async () => { const r = await fetch(`${API}/rankings/gap/distribution`); return r.json() },
+    queryFn: async () => { const r = await fetch(`${DATA_BASE}/gap_distribution.json`); return r.json() },
   })
 }
 

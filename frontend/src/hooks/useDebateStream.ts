@@ -18,7 +18,8 @@ const DEFAULT_MESSAGES: Record<AgentRole, AgentMessage> = {
   factcheck: { role: 'factcheck', displayName: '논두렁회계사', emoji: '🌾', content: '', isComplete: false, confidence: 0 },
 }
 
-const API = 'http://localhost:8010/api'
+// 정적 모드에서는 에이전트 토론 비활성
+const API = ''
 
 async function streamDebate(
   url: string,
